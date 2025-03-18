@@ -14,7 +14,7 @@ const newTask = async (req, res) => {
         .json({message:"title and descrption not found"});
     }
         // create document basede on our schema
-        await Task.create({title,description,due_date})
+       const newTask = await Task.create({title,description,due_date})
         res.status(200).json({ 
             success:true,
             message: "Task created successfully" 
